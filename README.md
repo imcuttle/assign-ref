@@ -19,8 +19,15 @@ yarn add assign-ref
 
 ## Usage
 
-```javascript
-const assignRef = require('assign-ref')
+```jsx
+import assignRef from 'assign-ref'
+const aref = React.createRef()
+const bref = React.createRef()
+
+<Button ref={ref => {
+    assignRef(aref, ref)
+    assignRef(bref, ref)
+}}></Button>
 ```
 
 ## Contributing
